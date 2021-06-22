@@ -1,61 +1,60 @@
 #include <Servo.h>
-
-// val= valus, pot = potentiometers
-
+//val = Values
 //define the servos
-Servo moto1;
-Servo moto2;
-Servo moto3;
-Servo moto4;
-Servo moto5;
+Servo motor1;
+Servo motor2;
+Servo motor3;
+Servo motor4;
+Servo motor5;
 
 //define the potentiometers
-int pot1 = A0;
-int pot2 = A1;
-int pot3 = A2;
-int pot4 = A3;
-int pot5 = A4;
+int potentiometers1 = A0;
+int potentiometers2 = A1;
+int potentiometers3 = A2;
+int potentiometers4 = A3;
+int potentiometers5 = A4;
 
-//variables to read the values from the analog pin
-int valpot1;
-int valpot2;
-int valpot3;
-int valpot4;
-int valpot5;
+//val = Values
+//variable to read the values from the analog pin
+int valpotentiometers1;
+int valpotentiometers2;
+int valpotentiometers3;
+int valpotentiometers4;
+int valpotentiometers5;
 
 void setup(){
   //attaches the servos
- 	 moto1.attach(1);
-	 moto2.attach(2);
- 	 moto3.attach(3);
- 	 moto4.attach(4);
- 	 moto5.attach(5);
+    motor1.attach(1);
+   motor2.attach(2);
+   motor3.attach(3);
+   motor4.attach(4);
+   motor5.attach(5);
 }
 
 void loop(){
   //read thr valuse from the potentiometers 
-    valpot1 = analogRead(pot1);
- 	valpot1 = map(valpot1,0,1023,0,180);
-	moto1.write(valpot1);
-	delay(15);
+    valpotentiometers1 = analogRead(potentiometers1);
+  valpotentiometers1 = map(valpotentiometers1,0,1023,0,180);
+  motor1.write(valpotentiometers1);
+  delay(15);
   
-	valpot2 = analogRead(pot2);
-	valpot2 = map(valpot2,0,1023,0,180);
-	moto2.write(valpot2);
-	delay(15);
+  valpotentiometers2 = analogRead(potentiometers2);
+  valpotentiometers2 = map(valpotentiometers2,0,1023,0,180);
+  motor2.write(valpotentiometers2);
+  delay(15);
   
-	valpot3 = analogRead(pot3);
-	valpot3 = map(valpot3,0,1023,0,180);
-	moto3.write(valpot3);
-	delay(15);
+  valpotentiometers3 = analogRead(potentiometers3);
+  valpotentiometers3 = map(valpotentiometers3,0,1023,0,180);
+  motor3.write(valpotentiometers3);
+  delay(15);
   
-	valpot4 = analogRead(pot4);
-	valpot4 = map(valpot4,0,1023,0,180);
-	moto4.write(valpot4);
-	delay(15);
+  valpotentiometers4 = analogRead(potentiometers4);
+  valpotentiometers4 = map(valpotentiometers4,0,1023,0,180);
+  motor4.write(valpotentiometers4);
+  delay(15);
   
-	valpot5 = analogRead(pot5);
-	valpot5 = map(valpot5,0,1023,0,180);
-	moto5.write(valpot5);
-	delay(15);
-	}
+  valpotentiometers5 = analogRead(potentiometers5);
+  valpotentiometers5 = map(valpotentiometers5,0,1023,0,180);
+  motor5.write(valpotentiometers5);
+  delay(15);
+  }
